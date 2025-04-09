@@ -13,6 +13,7 @@ import ShoppingList from './ShoppingList';
 import Card from './Card';
 import Header from './Header';
 import shoppingData from './shoppingData'; // Import the data
+import BitcoinGraph from './BitcoinGraph'; // Import the BitcoinGraph component
 
 function App() {
   return (
@@ -61,6 +62,10 @@ function App() {
 
       <Card title="Shopping List">
         <ShoppingList items={shoppingData} /> {/* Use the imported data */}
+      </Card>
+
+      <Card title="Bitcoin Graph">
+        <BitcoinGraph /> {/* Add the BitcoinGraph component here */}
       </Card>
     </>
   );
