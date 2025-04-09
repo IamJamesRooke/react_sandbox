@@ -14,6 +14,14 @@ import Card from './Card';
 import Header from './Header';
 import shoppingData from './shoppingData'; // Import the data
 import BitcoinGraph from './BitcoinGraph'; // Import the BitcoinGraph component
+import PropertyList from './PropertyList';
+
+const properties = [
+  {id: 129031, name: "Desert Yurt", rating: 3.5, price: 150},
+  {id: 129032, name: "Mountain Cabin", rating: 4.5, price: 250},
+  {id: 129033, name: "City Apartment", rating: 5, price: 300},
+  {id: 129034, name: "Beach House", rating: 2, price: 400},
+];
 
 function App() {
   return (
@@ -66,6 +74,10 @@ function App() {
 
       <Card title="Bitcoin Graph">
         <BitcoinGraph /> {/* Add the BitcoinGraph component here */}
+      </Card>
+      
+      <Card title="Property List">
+        <PropertyList properties={properties}/>
       </Card>
     </>
   );

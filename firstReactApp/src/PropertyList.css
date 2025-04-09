@@ -1,0 +1,27 @@
+.property-list {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.property-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.property-list li {
+    border: 1px solid #ccc;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.property-list h2 {
+    margin: 0 0 10px;
+}
+
+.property-list p {
+    margin: 5px 0;
+}
