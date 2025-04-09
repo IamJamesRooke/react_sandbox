@@ -7,6 +7,7 @@ import ListPicker from './ListPicker'
 import DoubleDice from './DoubleDice'
 import DoubleDiceDynamic from './DoubleDiceDynamic'
 import Heading from './Heading'
+import ColorList from './ColorList'
 
 function App() {
 
@@ -53,6 +54,11 @@ function App() {
       <div className="card">
         <h3 className="section-header">Heading</h3>
         <Heading color="yellow" text="Sample Header" />
+      </div>
+
+      <div className="card">
+        <h3 className="section-header">Color List</h3>
+        <ColorList colors={['pink', 'red', 'orange', 'green', 'indigo', 'violet']}/>
       </div>
     </>
   )
