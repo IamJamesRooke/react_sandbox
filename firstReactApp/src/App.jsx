@@ -1,73 +1,69 @@
-import './App.css'
+import './App.css';
 
-import Chicken from './Chicken'
-import Greeter from './Greeter'
-import Die from './Die'
-import ListPicker from './ListPicker'
-import DoubleDice from './DoubleDice'
-import DoubleDiceDynamic from './DoubleDiceDynamic'
-import Heading from './Heading'
-import ColorList from './ColorList'
-import SlotMachine from './Slots'
+import Chicken from './Chicken';
+import Greeter from './Greeter';
+import Die from './Die';
+import ListPicker from './ListPicker';
+import DoubleDice from './DoubleDice';
+import DoubleDiceDynamic from './DoubleDiceDynamic';
+import Heading from './Heading';
+import ColorList from './ColorList';
+import SlotMachine from './Slots';
+import ShoppingList from './ShoppingList';
+import Card from './Card';
+import Header from './Header';
+import shoppingData from './shoppingData'; // Import the data
 
 function App() {
-
   return (
     <>
-      <h1 style={{ color: 'black', padding: '10px', borderRadius: '5px', textAlign: 'center', fontSize: '4.5rem', fontWeight: 'bold', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)' }}>
-        React Vite Tutorial
-      </h1>
-      
-      <div className="card">
-        <h3 className="section-header">Chicken Function</h3>
+      <Header text="React Vite Tutorial" />
+
+      <Card title="Chicken Function">
         <Chicken />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Greeter Function</h3>
+      <Card title="Greeter Function">
         <Greeter name="James" from="Somebody" />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Dungeons & Dragons Dice</h3>
+      <Card title="Dungeons & Dragons Dice">
         <Die numDice={3} numSides={6} />
         <Die numDice={10} numSides={4} />
         <Die numDice={2} numSides={20} />
         <Die numDice={1} numSides={100} />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">List Picker</h3>
+      <Card title="List Picker">
         <ListPicker values={[1, 2, 3]} />
         <ListPicker values={['a', 'b', 'c']} />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Double Dice</h3>
+      <Card title="Double Dice">
         <DoubleDice />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Dynamic Double Dice</h3>
+      <Card title="Dynamic Double Dice">
         <DoubleDiceDynamic />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Heading</h3>
+      <Card title="Heading">
         <Heading color="yellow" text="Sample Header" />
-      </div>
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Color List</h3>
-        <ColorList colors={['pink', 'red', 'orange', 'green', 'indigo', 'violet']}/>
-      </div>
+      <Card title="Color List">
+        <ColorList colors={['pink', 'red', 'orange', 'green', 'indigo', 'violet']} />
+      </Card>
 
-      <div className="card">
-        <h3 className="section-header">Slot Machine</h3>
-        <SlotMachine/>
-      </div>
+      <Card title="Slot Machine">
+        <SlotMachine />
+      </Card>
+
+      <Card title="Shopping List">
+        <ShoppingList items={shoppingData} /> {/* Use the imported data */}
+      </Card>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
