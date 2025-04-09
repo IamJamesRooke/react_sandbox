@@ -6,6 +6,7 @@ import Die from './Die'
 import ListPicker from './ListPicker'
 import DoubleDice from './DoubleDice'
 import DoubleDiceDynamic from './DoubleDiceDynamic'
+import Heading from './Heading'
 
 function App() {
 
@@ -47,6 +48,11 @@ function App() {
       <div className="card">
         <h3 className="section-header">Dynamic Double Dice</h3>
         <DoubleDiceDynamic />
+      </div>
+
+      <div className="card">
+        <h3 className="section-header">Heading</h3>
+        <Heading color="yellow" text="Sample Header" />
       </div>
     </>
   )
