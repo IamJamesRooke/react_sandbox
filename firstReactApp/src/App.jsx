@@ -8,6 +8,7 @@ import DoubleDice from './DoubleDice'
 import DoubleDiceDynamic from './DoubleDiceDynamic'
 import Heading from './Heading'
 import ColorList from './ColorList'
+import SlotMachine from './Slots'
 
 function App() {
 
@@ -59,6 +60,11 @@ function App() {
       <div className="card">
         <h3 className="section-header">Color List</h3>
         <ColorList colors={['pink', 'red', 'orange', 'green', 'indigo', 'violet']}/>
+      </div>
+
+      <div className="card">
+        <h3 className="section-header">Slot Machine</h3>
+        <SlotMachine/>
       </div>
     </>
   )
