@@ -1,13 +1,11 @@
 import React from 'react';
 import Die from './Die';
+import Dice from './Dice';
 
 function App() {
   return (
     <div>
-      <Die val={2} />
-      <Die val={4} />
-      <Die val={1} />
-      <Die val={5} />
+      <Dice dice = {[1, 2, 3, 4, 5, 6]}/>
     </div>
   );
 }
