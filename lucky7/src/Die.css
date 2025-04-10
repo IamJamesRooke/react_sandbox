@@ -1,0 +1,33 @@
+.Die {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    display: inline-block;
+    width: 3em;
+    height: 3em;
+    margin: 0.5em;
+}
+
+.Die[data-value="1"] {
+    background-image: url('./assets/1.png');
+}
+
+.Die[data-value="2"] {
+    background-image: url('./assets/2.png');
+}
+
+.Die[data-value="3"] {
+    background-image: url('./assets/3.png');
+}
+
+.Die[data-value="4"] {
+    background-image: url('./assets/4.png');
+}
+
+.Die[data-value="5"] {
+    background-image: url('./assets/5.png');
+}
+
+.Die[data-value="6"] {
+    background-image: url('./assets/6.png');
+}
