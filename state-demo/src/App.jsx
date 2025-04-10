@@ -14,7 +14,7 @@ function App() {
     <hr></hr>
     <Dumbo/>
     <hr></hr>
-    <ScoreKeeper/>
+    <ScoreKeeper numPlayers={6}/>
     <hr></hr>
     <EmojiClicker/>
     </>
