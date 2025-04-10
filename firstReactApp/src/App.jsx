@@ -19,6 +19,8 @@ import Clicker from './Clicker';
 import Form from './Form';
 import Counter from './Counter';
 import Toggler from './Toggler';
+import TogglerCounter from './ToggleCounter';
+import ColorBox from './ColorBox';
 
 const properties = [
   {id: 129031, name: "Desert Yurt", rating: 3.5, price: 150},
@@ -31,6 +33,16 @@ function App() {
   return (
     <>
       <Header text="React Vite Tutorial" />
+
+
+
+      <Card title="Color Box">
+        <ColorBox/>
+      </Card>
+
+      <Card title="Toggler Counter">
+        <TogglerCounter/>
+      </Card>
 
       <Card title="Toggler">
         <Toggler/>

@@ -14,5 +14,3 @@ export default function Toggler() {
     </>
   );
 }
-
-// Removed inline styles, using external CSS instead
