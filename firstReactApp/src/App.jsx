@@ -15,6 +15,8 @@ import Header from './Header';
 import shoppingData from './shoppingData'; // Import the data
 import BitcoinGraph from './BitcoinGraph'; // Import the BitcoinGraph component
 import PropertyList from './PropertyList';
+import Clicker from './Clicker';
+import Form from './Form';
 
 const properties = [
   {id: 129031, name: "Desert Yurt", rating: 3.5, price: 150},
@@ -27,6 +29,15 @@ function App() {
   return (
     <>
       <Header text="React Vite Tutorial" />
+
+      <Card title="Form">
+        <Form/>
+      </Card>
+
+      <Card title="Clicker">
+        <Clicker/>
+      </Card>
+
 
       <Card title="Chicken Function">
         <Chicken />
@@ -79,6 +90,8 @@ function App() {
       <Card title="Property List">
         <PropertyList properties={properties}/>
       </Card>
+      
+
     </>
   );
 }
