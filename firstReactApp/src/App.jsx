@@ -17,6 +17,7 @@ import BitcoinGraph from './BitcoinGraph'; // Import the BitcoinGraph component
 import PropertyList from './PropertyList';
 import Clicker from './Clicker';
 import Form from './Form';
+import Counter from './Counter';
 
 const properties = [
   {id: 129031, name: "Desert Yurt", rating: 3.5, price: 150},
@@ -29,6 +30,10 @@ function App() {
   return (
     <>
       <Header text="React Vite Tutorial" />
+
+      <Card title="Counter">
+        <Counter/>
+      </Card>
 
       <Card title="Form">
         <Form/>
