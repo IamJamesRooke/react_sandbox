@@ -1,11 +1,26 @@
 import { useState } from "react"
 
 export default function ShoppingListForm({ addItem }) {
-  
 
-    const[formData, setFormData] = useState({product: "", quantity: 0})
+
+    const [formData, setFormData] = useState({ product: "", quantity: 0 })
+
+    const [productIsValid, setProductIsValid] = useState(false);
+
+    const validate = (product) => {
+        if (product.length === 0) {
+            setProductIsValid(false);
+        } else {
+            setProductIsValid(true);
+        }
+    }
+
     const handleChange = (evt) => {
-        setFormData(currData => {
+        if (evt.target.name === "product") {
+            validate(evt.target.value);
+        }
+
+        setFormData((currData) => {
             return {
                 ...currData,
                 [evt.target.name]: evt.target.value
@@ -15,33 +30,38 @@ export default function ShoppingListForm({ addItem }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addItem(formData)
-        setFormData({product: "", quantity: 0})
+        if(productIsValid) {
+            addItem(formData)
+            setFormData({ product: "", quantity: 0 })
+        }
     };
-  
+
     return (
-    <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
 
-        <label htmlFor="product">Product Name</label>
-        <input 
-        type="text" 
-        placeholder="product name" 
-        name="product" 
-        id="product"
-        onChange={handleChange}
-        value={formData.product} />
+            <label htmlFor="product">Product Name</label>
+            <input
+                type="text"
+                placeholder="product name"
+                name="product"
+                id="product"
+                onChange={handleChange}
+                value={formData.product}
+            />
+            {!productIsValid && <p style={{ color: "red" }}>Product cannot be empty.</p>}
 
-        <label htmlFor="quantity">Quantity</label>
-        <input 
-        type="number" 
-        placeholder="1" 
-        name="quantity" 
-        id="quantity"
-        onChange={handleChange}
-        value={formData.quantity} />
 
-        <button>Add Item</button>
+            <label htmlFor="quantity">Quantity</label>
+            <input
+                type="number"
+                placeholder="1"
+                name="quantity"
+                id="quantity"
+                onChange={handleChange}
+                value={formData.quantity} />
 
-    </form>
-  )
+            <button disabled={productIsValid? false: true}>Add Item</button>
+
+        </form>
+    )
 }
