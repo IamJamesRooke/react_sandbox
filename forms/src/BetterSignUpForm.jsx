@@ -9,11 +9,11 @@ export default function BetterSignUpForm() {
     })
 
     const handleChange = (evt) => {
-        const changedField = evt.target.name;
-        const newValue = evt.target.value;
         setFormData((currData) => {
-            currData[changedField] = newValue;
-            return {...currData};
+            return {
+                ...currData,
+                [evt.target.name]: evt.target.value
+            };
         })
     }
 
