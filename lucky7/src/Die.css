@@ -8,26 +8,26 @@
     margin: 0.5em;
 }
 
-.Die[data-value="1"] {
+.Die[val="1"] {
     background-image: url('./assets/1.png');
 }
 
-.Die[data-value="2"] {
+.Die[val="2"] {
     background-image: url('./assets/2.png');
 }
 
-.Die[data-value="3"] {
+.Die[val="3"] {
     background-image: url('./assets/3.png');
 }
 
-.Die[data-value="4"] {
+.Die[val="4"] {
     background-image: url('./assets/4.png');
 }
 
-.Die[data-value="5"] {
+.Die[val="5"] {
     background-image: url('./assets/5.png');
 }
 
-.Die[data-value="6"] {
+.Die[val="6"] {
     background-image: url('./assets/6.png');
 }

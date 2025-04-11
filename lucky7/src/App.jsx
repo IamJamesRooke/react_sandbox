@@ -1,13 +1,24 @@
-import React from 'react';
-import Die from './Die';
-import Dice from './Dice';
+import LuckyN from './LuckyN';
+import { sum } from './utils'
 
-function App() {
-  return (
-    <div>
-      <Dice dice = {[1, 2, 3, 4, 5, 6]}/>
-    </div>
-  );
+function Lucky7(dice) {
+  return sum(dice) === 7;
 }
 
-export default App;
+function lessThan4(dice) {
+  return sum(dice) < 4;
+}
+
+function allSameValue(dice) {
+  return dice.every( (v) => v === dice[0])
+}
+
+export default function App() {
+  return (
+    <>
+      <LuckyN winCheck={Lucky7} title="Lucky7"/>
+      <LuckyN winCheck={allSameValue} title="All the Same"/>
+      <LuckyN winCheck={lessThan4} title="Less Than 4"/>
+    </>
+  );
+}
